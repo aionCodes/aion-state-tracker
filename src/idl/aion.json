@@ -1,0 +1,91 @@
+{
+    "version": "0.1.0",
+    "name": "aion",
+    "instructions": [],
+    "accounts": [
+        {
+            "name": "doctrine",
+            "type": {
+                "kind": "struct",
+                "fields": [
+                    {
+                        "name": "authority",
+                        "type": "publicKey"
+                    },
+                    {
+                        "name": "doctrineId",
+                        "type": "u8"
+                    },
+                    {
+                        "name": "bump",
+                        "type": "u8"
+                    },
+                    {
+                        "name": "totalMessages",
+                        "type": "u32"
+                    },
+                    {
+                        "name": "messagesPerPage",
+                        "type": "u32"
+                    },
+                    {
+                        "name": "currentPageMessageCount",
+                        "type": "u32"
+                    },
+                    {
+                        "name": "activePageNumber",
+                        "type": "u32"
+                    },
+                    {
+                        "name": "currentMessageCost",
+                        "type": "u64"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "doctrinePage",
+            "type": {
+                "kind": "struct",
+                "fields": [
+                    {
+                        "name": "doctrine",
+                        "type": "publicKey"
+                    },
+                    {
+                        "name": "pageNumber",
+                        "type": "u32"
+                    },
+                    {
+                        "name": "messages",
+                        "type": {
+                            "vec": {
+                                "defined": "Message"
+                            }
+                        }
+                    },
+                    {
+                        "name": "bump",
+                        "type": "u8"
+                    }
+                ]
+            }
+        }
+    ],
+    "types": [
+        {
+            "name": "Message",
+            "type": {
+                "kind": "struct",
+                "fields": [
+                    {
+                        "name": "ipfsCid",
+                        "type": {
+                            "array": ["u8", 46]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

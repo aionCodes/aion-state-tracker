@@ -1,0 +1,25 @@
+{
+  "name": "aion-state-telegram-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "show-chats": "node scripts/show-chat-ids.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.28.0",
+    "@solana/web3.js": "^1.87.0",
+    "@supabase/supabase-js": "^2.46.2",
+    "axios": "^1.7.8",
+    "better-sqlite3": "^11.6.0",
+    "dotenv": "^16.4.6",
+    "node-cron": "^3.0.3",
+    "node-telegram-bot-api": "^0.66.0",
+    "sqlite3": "^5.1.7"
+  }
+}
